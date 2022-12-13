@@ -25,3 +25,10 @@ In the project directory, you can run:
 3. Google font: `https://fonts.google.com/`
 4. MUI:`https://mui.com/`
 5. Ant design: `https://ant.design/`
+
+## Reading materials MUI
+
+1. Text Field: use in `Search` component (`https://mui.com/material-ui/react-text-field/#main-content`)
+2. Card: use to display each recipe (`https://mui.com/material-ui/react-card/#main-content`)
+3. Icons (`https://mui.com/material-ui/material-icons/#main-content`)
+4. Button (`https://mui.com/material-ui/react-button/#main-content`)
