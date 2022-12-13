@@ -24,3 +24,4 @@ In the project directory, you can run:
 2. The images can be found in `assets` folder
 3. Google font: `https://fonts.google.com/`
 4. MUI:`https://mui.com/`
+5. Ant design: `https://ant.design/`
