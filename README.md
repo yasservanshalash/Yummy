@@ -9,10 +9,10 @@ The purpose of this assignment is to practice TypeScript
 
 ## Requirements
 
-1. Create a form where the user can insert the meal name
-2. Using the user input above to get the recipe using this api : `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`. For example, if the user type `pizza` then the url will be: `https://www.themealdb.com/api/json/v1/1/search.php?s=pizza`
-3. If the recipe is not found, display this message: `Sorry we have not got this recipe yet ! `
-4. Your application should have 4 pages namely: `Home`, `Recipe` ,`Favorite` and `Contact`
+1. Your application should have 4 pages namely: `Home`, `Recipe` ,`Favorite` and `Contact`
+2. Create a form where the user can insert the meal name
+3. Using the user input above to get the recipe using this api : `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`. For example, if the user type `pizza` then the url will be: `https://www.themealdb.com/api/json/v1/1/search.php?s=pizza`
+4. If the recipe is not found, display this message: `Sorry we have not got this recipe yet ! `
 5. The user can add their favorite by clicking the heart icon and the favorite recipes show in `Favorite` page.
 6. Styling had to be similar with the screenshot below
 
