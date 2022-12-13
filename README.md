@@ -18,6 +18,18 @@ In the project directory, you can run:
 
 ## Screenshots
 
+1. Home page
+   ![homePage](./src/assets/home_page.png)
+
+2. Recipe page
+   ![recipePage](./src/assets/recipe_page.png)
+
+3. Favorite page
+   ![favoritePage](./src/assets/favorite_page.png)
+
+4. Contact page
+   ![contactPage](./src/assets/contact_page.png)
+
 ## Notes
 
 1. The API docs: `https://www.themealdb.com/api.php`
@@ -32,3 +44,4 @@ In the project directory, you can run:
 2. Card: use to display each recipe (`https://mui.com/material-ui/react-card/#main-content`)
 3. Icons (`https://mui.com/material-ui/material-icons/#main-content`)
 4. Button (`https://mui.com/material-ui/react-button/#main-content`)
+5. Badge: (`https://mui.com/material-ui/react-badge/#main-content`)
