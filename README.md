@@ -4,18 +4,17 @@ The purpose of this assignment is to practice TypeScript
 
 ## How to run project
 
-1. Step 1: yarn
-2. Step 2: yarn start
-
-In the project directory, you can run:
+1. Step 1: `yarn`
+2. Step 2: `yarn start`
 
 ## Requirements
 
 1. Create a form where the user can insert the meal name
 2. Using the user input above to get the recipe using this api : `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`. For example, if the user type `pizza` then the url will be: `https://www.themealdb.com/api/json/v1/1/search.php?s=pizza`
-3. Your application should have 4 pages namely: `Home`, `Recipe` ,`Favorite`and `Contact`
-4. The user can add their favorite by clicking the heart icon and the favorite recipes show in `Favorite` page.
-5. Styling: font-family: `Rajdhani ,sans-serif`
+3. If the recipe is not found, display this message: `Sorry we have not got this recipe yet ! `
+4. Your application should have 4 pages namely: `Home`, `Recipe` ,`Favorite` and `Contact`
+5. The user can add their favorite by clicking the heart icon and the favorite recipes show in `Favorite` page.
+6. Styling had to be similar with the screenshot below
 
 ## Screenshots
 
@@ -35,7 +34,7 @@ In the project directory, you can run:
 
 1. The API docs: `https://www.themealdb.com/api.php`
 2. The images can be found in `assets` folder
-3. Google font: `https://fonts.google.com/`
+3. Google font: `https://fonts.google.com/` (`Rajdhani ,sans-serif`)
 4. MUI:`https://mui.com/`
 5. Ant design: `https://ant.design/`
 
