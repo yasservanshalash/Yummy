@@ -37,10 +37,24 @@ function App() {
     fetchData(url);
   }, [url]);
 
-  console.log(favoriteList);
+  useEffect(() => {
+    const uniqueIds: any[] = [];
+    setFavoriteList(
+      favoriteList.filter((element) => {
+        const isDuplicate = uniqueIds.includes(element.idMeal);
+        if (!isDuplicate) {
+          uniqueIds.push(element.idMeal);
+          return true;
+        }
+        return false;
+      })
+    );
+    setCount(favoriteList.length);
+  }, [favoriteList]);
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar count={count} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

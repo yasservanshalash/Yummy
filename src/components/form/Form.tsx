@@ -16,7 +16,7 @@ const Form = ({ setUserInput }: PropType) => {
         <TextField
           id="outlined-helperText"
           label="Please enter the name"
-          defaultValue="lamb"
+          defaultValue=""
           helperText="suggestions: pizza, pork, pasta..."
           onChange={changeHandler}
         />

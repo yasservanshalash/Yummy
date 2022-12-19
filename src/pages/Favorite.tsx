@@ -8,8 +8,10 @@ type PropType = {
 };
 
 const Favorite = ({ favoriteList, setCount }: PropType) => {
+  setCount(favoriteList.length);
+
   return (
-    <div>
+    <div className="favorites">
       {favoriteList.length > 0 ? (
         favoriteList.map((item) => {
           return (
