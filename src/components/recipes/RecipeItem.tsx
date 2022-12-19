@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./RecipeItem.css";
 import { RecipeType } from "../../App";
 import { styled } from "@mui/material/styles";
@@ -37,11 +37,11 @@ type PropType = {
   setFavoriteList: React.Dispatch<React.SetStateAction<RecipeType[]>>;
 };
 const RecipeItem = ({ recipe, favoriteList, setFavoriteList }: PropType) => {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const pressed = favoriteList.includes(recipe) ? true : false;
   console.log(pressed, "pressed");
-  const [clicked, setClicked] = React.useState(pressed);
+  const [clicked, setClicked] = useState(pressed);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -120,6 +120,9 @@ const RecipeItem = ({ recipe, favoriteList, setFavoriteList }: PropType) => {
           <CardContent>
             <Typography paragraph>Method:</Typography>
             <Typography paragraph>
+              {recipe.strInstructions}
+            </Typography>
+            {/* <Typography paragraph>
               Heat 1/2 cup of the broth in a pot until simmering, add saffron
               and set aside for 10 minutes.
             </Typography>
@@ -145,7 +148,7 @@ const RecipeItem = ({ recipe, favoriteList, setFavoriteList }: PropType) => {
             <Typography>
               Set aside off of the heat to let rest for 10 minutes, and then
               serve.
-            </Typography>
+            </Typography> */}
           </CardContent>
         </Collapse>
       </Card>
