@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/Home";
-import Recipe from './pages/Recipe';
-import Favorite from './pages/Favorite';
-import Contact from './pages/Contact';
+import Recipe from "./pages/Recipe";
+import Favorite from "./pages/Favorite";
+import Contact from "./pages/Contact";
 import "./App.css";
 
 export type RecipeType = {
@@ -19,32 +19,39 @@ export type RecipeType = {
   strMeasure1: string;
   strMeasure2: string;
   strMeasure3: string;
-}
+};
 function App() {
   const [userInput, setUserInput] = useState<string>("");
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
-
+  const [favoriteList, setFavoriteList] = useState<RecipeType[]>([]);
+  
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`;
 
   const fetchData = (url: string) => {
-    fetch(url).then((res) => res.json()).then((data) => setRecipes(data.meals))
-  }
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setRecipes(data.meals));
+  };
 
   useEffect(() => {
     fetchData(url);
   }, [url]);
 
   console.log(recipes);
-  return <div className="App">
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/recipe" element={<Recipe setUserInput={setUserInput} recipes={recipes} />} />
-      <Route path="/favorite" element={<Favorite />} />
-      <Route path="/contact" element={<Contact />} />
-      
-    </Routes>
-  </div>;
+  return (
+    <div className="App">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/recipe"
+          element={<Recipe setUserInput={setUserInput} recipes={recipes} />}
+        />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

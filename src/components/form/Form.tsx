@@ -11,8 +11,8 @@ const Form = ({ setUserInput }: PropType) => {
   };
 
   return (
-    <div>
-      <form>
+    <div className="form">
+      <form className="form">
         <TextField
           id="outlined-helperText"
           label="Please enter the name"

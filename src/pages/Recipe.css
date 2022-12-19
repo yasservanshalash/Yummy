@@ -1,0 +1,20 @@
+.recipePage {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+.meals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  margin: 20px;
+  gap: 30px;
+}
+
+.sorry {
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+.recipePage {
+  width: 100%;
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  margin: 20px;
+  gap: 30px;
+}
+
+.sorry {
+  text-align: center;
+}
