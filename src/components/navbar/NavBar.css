@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+    gap: 10px
+}
+
+.navbar__logo img {
+    width: 50px;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 125%;
+}
+
+.navbar__links a {
+    text-decoration: none;
+    font-weight: 500;
+}
