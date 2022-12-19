@@ -15,6 +15,10 @@ export type RecipeType = {
   strIngredient2: string;
   strIngredient3: string;
   strInstructions: string;
+  strMealThumb: string;
+  strMeasure1: string;
+  strMeasure2: string;
+  strMeasure3: string;
 }
 function App() {
   const [userInput, setUserInput] = useState<string>("");
