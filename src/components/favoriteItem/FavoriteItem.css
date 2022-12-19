@@ -1,0 +1,16 @@
+.favoriteItemStyle {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img {
+  width: 150px;
+}

@@ -1,9 +1,30 @@
-import React from 'react'
+import React from "react";
+import FavoriteItem from "../components/favoriteItem/FavoriteItem";
+import { RecipeType } from "../App";
 
-const Favorite = () => {
+type PropType = {
+  favoriteList: RecipeType[];
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const Favorite = ({ favoriteList, setCount }: PropType) => {
   return (
-    <div>Favorite</div>
-  )
-}
+    <div>
+      {favoriteList.length > 0 ? (
+        favoriteList.map((item) => {
+          return (
+            <FavoriteItem
+              name={item.strMeal}
+              category={item.strCategory}
+              image={item.strMealThumb}
+            />
+          );
+        })
+      ) : (
+        <h1>No Items</h1>
+      )}
+    </div>
+  );
+};
 
-export default Favorite
+export default Favorite;

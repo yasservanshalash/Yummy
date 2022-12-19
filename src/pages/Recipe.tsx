@@ -6,12 +6,23 @@ import { RecipeType } from "../App";
 type PropTypes = {
   setUserInput: React.Dispatch<React.SetStateAction<string>>;
   recipes: RecipeType[];
+  favoriteList: RecipeType[];
+  setFavoriteList: React.Dispatch<React.SetStateAction<RecipeType[]>>;
 };
-const Recipe = ({ setUserInput, recipes }: PropTypes) => {
+const Recipe = ({
+  setUserInput,
+  recipes,
+  favoriteList,
+  setFavoriteList,
+}: PropTypes) => {
   return (
     <div className="recipePage">
       <Form setUserInput={setUserInput} />
-      <Recipes recipes={recipes} />
+      <Recipes
+        recipes={recipes}
+        favoriteList={favoriteList}
+        setFavoriteList={setFavoriteList}
+      />
     </div>
   );
 };

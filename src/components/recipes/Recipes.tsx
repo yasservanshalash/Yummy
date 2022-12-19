@@ -5,13 +5,22 @@ import { RecipeType } from "../../App";
 
 type PropType = {
   recipes: RecipeType[];
+  favoriteList: RecipeType[];
+  setFavoriteList: React.Dispatch<React.SetStateAction<RecipeType[]>>;
 };
-const Recipes = ({ recipes }: PropType) => {
+const Recipes = ({ recipes, favoriteList, setFavoriteList }: PropType) => {
   return (
     <div className="meals">
       {recipes ? (
         recipes.map((recipe) => {
-          return <RecipeItem key={recipe.idMeal} recipe={recipe} />;
+          return (
+            <RecipeItem
+              key={recipe.idMeal}
+              recipe={recipe}
+              favoriteList={favoriteList}
+              setFavoriteList={setFavoriteList}
+            />
+          );
         })
       ) : (
         <h1 className="sorry">Sorry we have not got this recipe yet!</h1>

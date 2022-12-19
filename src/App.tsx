@@ -24,7 +24,7 @@ function App() {
   const [userInput, setUserInput] = useState<string>("");
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
   const [favoriteList, setFavoriteList] = useState<RecipeType[]>([]);
-  
+  const [count, setCount] = useState(0);
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`;
 
   const fetchData = (url: string) => {
@@ -37,7 +37,7 @@ function App() {
     fetchData(url);
   }, [url]);
 
-  console.log(recipes);
+  console.log(favoriteList);
   return (
     <div className="App">
       <NavBar />
@@ -45,9 +45,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/recipe"
-          element={<Recipe setUserInput={setUserInput} recipes={recipes} />}
+          element={
+            <Recipe
+              setUserInput={setUserInput}
+              recipes={recipes}
+              favoriteList={favoriteList}
+              setFavoriteList={setFavoriteList}
+            />
+          }
         />
-        <Route path="/favorite" element={<Favorite />} />
+        <Route
+          path="/favorite"
+          element={<Favorite favoriteList={favoriteList} setCount={setCount} />}
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
